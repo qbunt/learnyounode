@@ -8,17 +8,17 @@ var server = http.createServer((req, res)=>{
 
     // write a new Date into myDate
     var myDate = new Date(parsedDateObj.query.iso);
-
+    var results = {};
     switch (parsedDateObj.pathname){
         case '/api/parsetime':
-            var results = {
+            results = {
                 hour: myDate.getHours(),
                 minute: myDate.getMinutes(),
                 second: myDate.getSeconds()
             };
         break;
         case '/api/unixtime':
-            var results = {
+            results = {
                 unixtime: myDate.getTime()
             };
         break;
