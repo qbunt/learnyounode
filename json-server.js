@@ -32,7 +32,6 @@ var server = http.createServer((req, res)=>{
         res.writeHead(404);
         res.end();
     }
-
 });
 
 server.listen(port);
